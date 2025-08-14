@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --shadow-inner: inset 3px 3px 8px rgba(255, 255, 255, 0.1);
+  --shadow-inner-2: inset 3px 3px 8px rgba(255, 255, 255, 0.5);
+  --shadow-text-area: inset 3px 3px 8px rgba(0, 0, 0, 0.04);
+  --shadow-buttons: inset 3px 3px 8px rgba(255, 255, 255, 1);
+  --shadow-icons: 3px 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+.navbar-btn {
+  @apply flex items-center gap-1.5 px-10 py-1.5 text-sm font-semibold leading-tight text-white bg-gradient-to-tl from-[#1C1D22] to-[#2A2C33] hover:bg-gradient-to-br rounded-md border border-zinc-500 shadow-inner cursor-pointer transition-colors duration-200;
+}
+
+.primary-btn {
+  @apply flex items-center gap-1 md:gap-1.5 px-3 md:px-8 py-1.5 text-sm font-semibold leading-tight text-white bg-gradient-to-t from-[#93CAF4] to-[#5897EC] hover:bg-gradient-to-tr disabled:bg-sky-200 disabled:text-white/50 rounded-md border border-[#528EE9] shadow-inner cursor-pointer disabled:cursor-not-allowed;
+}
+
+.secondary-btn {
+  @apply flex items-center gap-1 md:gap-1.5 px-3 md:px-5 py-1.5 text-sm font-semibold leading-tight text-[#2A2C33] bg-[#F3F4F6] hover:bg-gradient-to-br from-[#F3F4F6] to-white rounded-md border border-[#C3C3C3] cursor-pointer;
+}
