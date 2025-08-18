@@ -8,6 +8,7 @@ function App() {
   const [analysis, setAnalysis] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [viewInfo, setViewInfo] = useState(false);
 
   const analyzeText = async (text) => {
     if (!text.trim()) {
@@ -58,7 +59,7 @@ function App() {
             <Search className="size-4" />
             Verbo
           </a>
-          <button className="navbar-btn">
+          <button className="navbar-btn" onClick={() => setViewInfo(true)}>
             <Info className="size-4" />
             Learn More
           </button>
@@ -128,6 +129,29 @@ function App() {
           </p>
         </div>
       </footer>
+
+      {viewInfo && (
+        <div className="fixed inset-0 bg-black/20 flex items-center justify-center p-4 z-[999]">
+          <div className="p-4 md:p-6 bg-gradient-to-t from-slate-50 to-slate-100 rounded-xl border border-slate-200 shadow-inner-2">
+            <h3 className="font-medium text-[#4A4D56] text-center text-lg mb-4">
+              Tips for better analysis:
+            </h3>
+            <ul className="text-sm text-[#4A4D56] space-y-1">
+              <li>• Include multiple sentences for readability analysis</li>
+              <li>• Add paragraphs for better structure insights</li>
+              <li>• Longer texts provide more accurate statistics</li>
+            </ul>
+            <div className="flex justify-end">
+              <button
+                className="secondary-btn mt-4"
+                onClick={() => setViewInfo(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
