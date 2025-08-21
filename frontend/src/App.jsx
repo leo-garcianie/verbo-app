@@ -20,7 +20,7 @@ function App() {
     setError(null);
 
     try {
-      const response = await fetch("https://verbo-app-production.up.railway.app/", {
+      const response = await fetch("https://verbo-app-production.up.railway.app/api/analyze", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
