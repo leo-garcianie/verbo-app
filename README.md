@@ -2,6 +2,15 @@
 
 A web application for text analysis, showing metrics such as word count, character count, sentences, and paragraphs.
 
+## Key features:
+- Real-time Text Analysis: Instant metrics calculation as users type or paste content
+- Multi-metric Display: Word count, character count, sentence count, and paragraph count
+- Clean Interface: Minimalist design focused on readability and ease of use
+- Fast Processing: Optimized algorithms for quick text analysis regardless of content length
+
+<img src="https://github.com/leo-garcianie/verbo-app/blob/main/screenshots/verbo-img1.png?raw=true" width="700px" height="auto"/>
+<img src="https://github.com/leo-garcianie/verbo-app/blob/main/screenshots/verbo-img2.png?raw=true" width="700px" height="auto"/>
+
 ## Technologies
 ### Backend
 - Node.js – runtime environment
